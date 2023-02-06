@@ -5,7 +5,7 @@ async function main() {
 	await new Promise<void>(resolve => {
 		stdout.write("What is your first name? ")
 		stdin.on("readable", function readInput() {
-			firstName += stdin.read().toString("utf-8")
+			firstName += stdin.read().toString("utf-8").trim()
 			stdin.off("readable", readInput)
 			resolve()
 		})
@@ -15,7 +15,7 @@ async function main() {
 	await new Promise<void>(resolve => {
 		stdout.write("What is your last name? ")
 		stdin.on("readable", function readInput() {
-			lastName += stdin.read().toString("utf-8")
+			lastName += stdin.read().toString("utf-8").trim()
 			stdin.off("readable", readInput)
 			resolve()
 		})
