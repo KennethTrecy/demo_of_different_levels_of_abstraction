@@ -44,7 +44,7 @@ async function main() {
 	await new Promise<void>(resolve => {
 		stdout.write(process.env.MONEY_QUESTION || DEFAULT_MONEY_QUESTION)
 		stdin.on("readable", function readInput() {
-			age = Number(stdin.read().toString(ENCODING))
+			money = Number(stdin.read().toString(ENCODING))
 			stdin.off("readable", readInput)
 			resolve()
 		})
