@@ -14,7 +14,7 @@ async function main() {
 	await new Promise<void>(resolve => {
 		stdout.write(process.env.FIRST_NAME_QUESTION || DEFAULT_FIRST_NAME_QUESTION)
 		stdin.on("readable", function readInput() {
-			firstName += stdin.read().toString(ENCODING).trim()
+			firstName = stdin.read().toString(ENCODING).trim()
 			stdin.off("readable", readInput)
 			resolve()
 		})
@@ -24,7 +24,7 @@ async function main() {
 	await new Promise<void>(resolve => {
 		stdout.write(process.env.LAST_NAME_QUESTION || DEFAULT_LAST_NAME_QUESTION)
 		stdin.on("readable", function readInput() {
-			lastName += stdin.read().toString(ENCODING).trim()
+			lastName = stdin.read().toString(ENCODING).trim()
 			stdin.off("readable", readInput)
 			resolve()
 		})

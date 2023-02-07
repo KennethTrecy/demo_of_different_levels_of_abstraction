@@ -15,7 +15,7 @@ async function readStringInput(question: string): Promise<string> {
 	await new Promise<void>(resolve => {
 		stdout.write(question)
 		stdin.on("readable", function readInput() {
-			input += stdin.read().toString(ENCODING).trim()
+			input = stdin.read().toString(ENCODING).trim()
 			stdin.off("readable", readInput)
 			resolve()
 		})
