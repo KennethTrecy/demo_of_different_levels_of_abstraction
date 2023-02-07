@@ -6,7 +6,7 @@ config()
 const DEFAULT_FIRST_NAME_QUESTION = "What is your first name? "
 const DEFAULT_LAST_NAME_QUESTION = "What is your last name? "
 const DEFAULT_AGE_QUESTION = "What is your age? "
-const DEFAULT_MONEY_QUESTION = "How much do you have? "
+const DEFAULT_DISTANCE_QUESTION = "How many meters did you walk? "
 const ENCODING = "utf-8"
 
 async function readStringInput(question: string): Promise<string> {
@@ -49,10 +49,11 @@ async function main() {
 	const ageQuestion = process.env.AGE_QUESTION || DEFAULT_AGE_QUESTION
 	const age = await readNumericInput(ageQuestion)
 
-	const moneyQuestion = process.env.MONEY_QUESTION || DEFAULT_MONEY_QUESTION
-	const money = await readNumericInput(moneyQuestion)
+	const distanceQuestion = process.env.DISTANCE_QUESTION || DEFAULT_DISTANCE_QUESTION
+	const distance = await readNumericInput(distanceQuestion)
 
-	stdout.write(`You are ${firstName} ${lastName}. Your age is ${age} and you have $${money}.\n`)
+	stdout.write(`You are ${firstName} ${lastName}.\n`)
+	stdout.write(`Your age is ${age} and you have walked for ${distance} meters.\n`)
 }
 
 main()
