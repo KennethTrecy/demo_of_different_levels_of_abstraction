@@ -5,17 +5,8 @@
 ![Lines of code](https://img.shields.io/tokei/lines/github/KennethTrecy/demo_of_different_levels_of_abstraction?style=for-the-badge)
 ![GitHub code size in bytes](https://img.shields.io/github/repo-size/KennethTrecy/demo_of_different_levels_of_abstraction?style=for-the-badge)
 
-# Web Template
-This is a web template repository of Kenneth Trecy Tobias. Its purpose is to be used for other
-templates/projects either by forking this repository, copying its files, or merging its history to
-other existing templates/projects.
-
-This template has multiple branches that are named after the main package(s)/purpose they contain.
-For example, [`vue` branch] contains [`vue` package]. If branch has multiple packages/purpose, they
-are concatenated using `-` character. By default, most branches contain [`rollup` package] as
-default JavaScript module bundler.
-
-You can check the packages and/or purpose of the branch by reading the [notes] section.
+# Demo of Different Levels of Abstractions
+Collection of files demonstrating the different levels of abstraction as explained in [my article].
 
 <!--
 The `origin` section may be used to indicate where the project (that is using this template) came
@@ -115,3 +106,4 @@ https://github.com/KennethTrecy/web_template/tree/mocha-svelte-typescript-sass
 [pnpm]: https://pnpm.io/installation
 [Conventional Commits specification]: https://www.conventionalcommits.org/en/v1.0.0/
 [contributing guide]: ./CONTRIBUTING.md
+[my article]: https://kennethtrecy.pages.dev/articles/different_levels_of_abstraction_in_software
