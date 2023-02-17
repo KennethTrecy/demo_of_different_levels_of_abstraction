@@ -14,9 +14,9 @@ async function readStringInput(question: string): Promise<string> {
 
 	await new Promise<void>(resolve => {
 		stdout.write(question)
-		stdin.on("readable", function readInput() {
+		stdin.on("readable", function readRawInput() {
 			input = stdin.read().toString(ENCODING).trim()
-			stdin.off("readable", readInput)
+			stdin.off("readable", readRawInput)
 			resolve()
 		})
 	})
@@ -34,9 +34,9 @@ async function main() {
 	let age = 0
 	await new Promise<void>(resolve => {
 		stdout.write(process.env.AGE_QUESTION || DEFAULT_AGE_QUESTION)
-		stdin.on("readable", function readInput() {
+		stdin.on("readable", function readRawInput() {
 			age = Number(stdin.read().toString(ENCODING))
-			stdin.off("readable", readInput)
+			stdin.off("readable", readRawInput)
 			resolve()
 		})
 	})
@@ -44,9 +44,9 @@ async function main() {
 	let distance = 0
 	await new Promise<void>(resolve => {
 		stdout.write(process.env.DISTANCE_QUESTION || DEFAULT_DISTANCE_QUESTION)
-		stdin.on("readable", function readInput() {
+		stdin.on("readable", function readRawInput() {
 			distance = Number(stdin.read().toString(ENCODING))
-			stdin.off("readable", readInput)
+			stdin.off("readable", readRawInput)
 			resolve()
 		})
 	})

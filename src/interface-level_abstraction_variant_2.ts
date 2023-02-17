@@ -12,9 +12,9 @@ const ENCODING = "utf-8"
 async function readInput<T>(question: string, cast: (rawInput: string) => T): Promise<T> {
 	return await new Promise<T>(resolve => {
 		stdout.write(question)
-		stdin.on("readable", function readInput() {
+		stdin.on("readable", function readRawInput() {
 			const input = cast(stdin.read().toString(ENCODING))
-			stdin.off("readable", readInput)
+			stdin.off("readable", readRawInput)
 			resolve(input)
 		})
 	})

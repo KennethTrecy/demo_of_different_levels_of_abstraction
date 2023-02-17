@@ -17,9 +17,9 @@ class InputReader<T extends string|number> {
 
 		await new Promise<void>(resolve => {
 			stdout.write(this.question)
-			stdin.on("readable", function readInput() {
+			stdin.on("readable", function readRawInput() {
 				input = stdin.read().toString(ENCODING)
-				stdin.off("readable", readInput)
+				stdin.off("readable", readRawInput)
 				resolve()
 			})
 		})

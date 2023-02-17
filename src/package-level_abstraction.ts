@@ -4,9 +4,9 @@ async function main() {
 	let firstName = ""
 	await new Promise<void>(resolve => {
 		stdout.write("What is your first name? ")
-		stdin.on("readable", function readInput() {
+		stdin.on("readable", function readRawInput() {
 			firstName = stdin.read().toString("utf-8").trim()
-			stdin.off("readable", readInput)
+			stdin.off("readable", readRawInput)
 			resolve()
 		})
 	})
@@ -14,9 +14,9 @@ async function main() {
 	let lastName = ""
 	await new Promise<void>(resolve => {
 		stdout.write("What is your last name? ")
-		stdin.on("readable", function readInput() {
+		stdin.on("readable", function readRawInput() {
 			lastName = stdin.read().toString("utf-8").trim()
-			stdin.off("readable", readInput)
+			stdin.off("readable", readRawInput)
 			resolve()
 		})
 	})
@@ -24,9 +24,9 @@ async function main() {
 	let age = 0
 	await new Promise<void>(resolve => {
 		stdout.write("What is your age? ")
-		stdin.on("readable", function readInput() {
+		stdin.on("readable", function readRawInput() {
 			age = Number(stdin.read().toString("utf-8"))
-			stdin.off("readable", readInput)
+			stdin.off("readable", readRawInput)
 			resolve()
 		})
 	})
@@ -34,9 +34,9 @@ async function main() {
 	let distance = 0
 	await new Promise<void>(resolve => {
 		stdout.write("How many meters did you walk? ")
-		stdin.on("readable", function readInput() {
+		stdin.on("readable", function readRawInput() {
 			distance = Number(stdin.read().toString("utf-8"))
-			stdin.off("readable", readInput)
+			stdin.off("readable", readRawInput)
 			resolve()
 		})
 	})
