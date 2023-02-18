@@ -1,24 +1,17 @@
 {
-	"name": "web_template",
-	"version": "v0.4.4-web_template-dev",
+	"name": "demo_of_different_levels_of_abstraction",
+	"version": "1.0.0-dev",
 	"description": "This is a general web template repository of Kenneth Trecy Tobias. Its purpose is to be used for other templates/projects either by forking this repository, copying its files, or merging its history to other existing templates/projects.",
-	"homepage": "https://github.com/KennethTrecy/web_template",
+	"homepage": "https://github.com/KennethTrecy/demo_of_different_levels_of_abstraction",
 	"keywords": [
-		"front-end",
-		"web",
-		"template-repository"
+		"abstraction",
+		"demo"
 	],
 	"private": "true",
 	"license": "MIT",
 	"scripts": {
 		"prepare": "husky install",
-		"dev": "npm run development",
-		"development": "npx rollup --bundleConfigAsCjs -c bundler/dev/rollup.config.js",
-		"watch": "npx rollup --bundleConfigAsCjs -c bundler/dev/rollup.config.js --watch",
-		"prod": "npm run production",
-		"production": "npx rollup --bundleConfigAsCjs -c bundler/prod/rollup.config.js",
-		"test:unit": "npx rollup -c bundler/test/rollup.config.js && npx mocha hidden/t/**/*.js",
-		"test:watch_unit": "npx mocha hidden/t/**/*.js --watch --watch-files hidden/t/**/*.js"
+		"dev": "npm run development"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.3.0",
