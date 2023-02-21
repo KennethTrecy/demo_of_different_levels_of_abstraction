@@ -61,4 +61,4 @@ Coded by Kenneth Trecy Tobias.
 [pnpm]: https://pnpm.io/installation
 [Conventional Commits specification]: https://www.conventionalcommits.org/en/v1.0.0/
 [contributing guide]: ./CONTRIBUTING.md
-[my article]: https://kennethtrecy.pages.dev/articles/different_levels_of_abstraction_in_software
+[my article]: https://kennethtrecy.pages.dev/articles/different_levels_of_abstraction_in_programming
